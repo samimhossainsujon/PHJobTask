@@ -84,7 +84,7 @@ const SignUp = () => {
     return (
         <>
             <Helmet>
-                <title>SignUp || Dance School </title>
+                <title>SignUp || Ph Job Task </title>
                 <link rel="canonical" href="https://www.tacobell.com/" />
             </Helmet>
 

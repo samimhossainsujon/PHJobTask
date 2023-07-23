@@ -17,6 +17,7 @@ import Login from './components/RegistrationPage/Login/Login';
 import SignUp from './components/RegistrationPage/SignUp/SignUp';
 import AuthProvider from './components/AuthProviders/AuthProvider/AuthProvider';
 import { HelmetProvider } from 'react-helmet-async';
+import CollegesDetails from './components/Colleges/CollegesDetails';
 
 
 
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
       {
         path: "/Colleges",
         element: <Colleges />
+      },
+
+      {
+        path: "/CollegesDetails",
+        element: <PrivateRoutes><CollegesDetails /></PrivateRoutes>
       },
 
 

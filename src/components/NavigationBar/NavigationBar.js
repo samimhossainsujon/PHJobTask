@@ -7,7 +7,7 @@ const NavigationBar = () => {
 
     const webSiteName =
         <>
-            <Link to='/'>website name</Link>
+            <Link to='/'>Ph Job Task</Link>
         </>
 
     const websiteMenu =
