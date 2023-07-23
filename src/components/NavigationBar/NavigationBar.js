@@ -16,6 +16,7 @@ const NavigationBar = () => {
             <li><Link to='/Colleges'>Colleges</Link></li>
             <li><Link to='/Admission'>Admission</Link></li>
             <li><Link to='/MyCollege'>My College</Link></li>
+            <li><Link to='/Dashboard'>Dashboard</Link></li>
         </>
 
 

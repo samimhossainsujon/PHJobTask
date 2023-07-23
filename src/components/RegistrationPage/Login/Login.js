@@ -83,8 +83,7 @@ const Login = () => {
 
         <>
             <Helmet>
-                <title>Login || Ph Job Task</title>
-                <link rel="canonical" href="https://www.tacobell.com/" />
+                <title>Login || Ph Job Task</title>               
             </Helmet>
 
 

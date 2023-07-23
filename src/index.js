@@ -18,6 +18,10 @@ import SignUp from './components/RegistrationPage/SignUp/SignUp';
 import AuthProvider from './components/AuthProviders/AuthProvider/AuthProvider';
 import { HelmetProvider } from 'react-helmet-async';
 import CollegesDetails from './components/Colleges/CollegesDetails';
+import Dashboard from './components/Admin/Dashboard/Dashboard';
+import AddGallery from './components/Admin/AddGallery/AddGallery';
+import AddColleges from './components/Admin/PostAdmin/AddColleges/AddColleges';
+import AddAdmission from './components/Admin/PostAdmin/AddAdmission/AddAdmission';
 
 
 
@@ -65,8 +69,32 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <SignUp />
       },
+
     ],
   },
+
+  {
+    path: 'Dashboard',
+    errorElement: "error page",
+    element: <PrivateRoutes> <Dashboard></Dashboard> </PrivateRoutes>,
+
+    children: [
+
+      {
+        path: "AddColleges",
+        element:<AddColleges/>
+      },
+
+      {
+        path: "AddAdmission",
+        element:<AddAdmission/>
+      },
+      {
+        path: "AddGallery",
+        element:<AddGallery/>
+      },
+    ]
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

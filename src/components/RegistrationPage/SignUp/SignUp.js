@@ -14,7 +14,7 @@ const SignUp = () => {
     const navigate = useNavigate();
     const [confirmPassword, setConfirmPassword] = useState('');
     const [data, setData] = useState({ email: '', password: '' });
-   
+
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = data => {
@@ -31,7 +31,7 @@ const SignUp = () => {
                         .then(() => {
                             const sendUserData = { name: data.name, email: data.email };
 
-                            fetch('https://assignment-12-server-tawny.vercel.app/users', {
+                            fetch('http://localhost:5000/users', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -85,7 +85,6 @@ const SignUp = () => {
         <>
             <Helmet>
                 <title>SignUp || Ph Job Task </title>
-                <link rel="canonical" href="https://www.tacobell.com/" />
             </Helmet>
 
             <div>
@@ -170,7 +169,6 @@ const SignUp = () => {
                                             onChange={event => setConfirmPassword(event.target.value)}
                                             name="confirmPassword"
                                             {...register('confirmPassword', {
-                                                required: true,
                                                 required: true,
                                                 minLength: 6,
                                                 pattern: /(?=.*[A-Z])(?=.*[!@#$&*])/
