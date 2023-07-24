@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const Admission = () => {
@@ -15,15 +16,18 @@ const Admission = () => {
     }, [])
     return (
         <div>
+            <Helmet>
+                <title>Admission || PH JOB TASK </title>
+            </Helmet>
             <div>
                 <h1 className='text-center mt-10 mb-10 font-bold text-2xl underline underline-offset-8 '> apply a College to get Started Your study</h1>
             </div>
             <>
                 <div className='gap-5 grid  lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
                     {collages.map((collage, index) => (
-                        <div 
-                        key={collage._id}
-                        collage={collage}
+                        <div
+                            key={collage._id}
+                            collage={collage}
                         >
                             <div className="card w-96 bg-base-100 shadow-xl">
                                 <figure className="px-2 pt-2">

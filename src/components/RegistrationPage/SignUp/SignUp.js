@@ -84,7 +84,7 @@ const SignUp = () => {
     return (
         <>
             <Helmet>
-                <title>SignUp || Ph Job Task </title>
+                <title>SignUp || PH JOB TASK </title>
             </Helmet>
 
             <div>

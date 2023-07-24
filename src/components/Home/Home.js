@@ -5,6 +5,8 @@ import { BsFillCalendarEventFill } from 'react-icons/bs';
 import { MdSportsScore } from 'react-icons/md';
 import { FcSportsMode } from 'react-icons/fc';
 import { AiFillCalendar } from 'react-icons/ai';
+import Feedback from '../Feedback/Feedback';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
 
@@ -23,6 +25,10 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>HOME || PH JOB TASK </title>
+
+            </Helmet>
             <>
                 <div className='gap-5 grid  lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
                     {collages.map((collage, index) => (
@@ -38,7 +44,7 @@ const Home = () => {
                                     <AiFillCalendar className='text-xl'></AiFillCalendar>
                                     <h1>AdmissionDate : {collage.AdmissionDate}</h1>
                                 </div>
-                                
+
                                 <div className='flex items-center gap-3'>
                                     <BsFillCalendarEventFill className='text-xl'></BsFillCalendarEventFill>
                                     <h1>Events : {collage.Events}</h1>
@@ -58,11 +64,13 @@ const Home = () => {
 
                             </div>
                         </div>
-                        ))}
+                    ))}
                 </div>
             </>
 
             <CollegeImage />
+
+            <Feedback />
         </div>
     );
 };

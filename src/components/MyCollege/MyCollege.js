@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 
 const MyCollege = () => {
   const [collages, setCollage] = useState([]);
-  const [showModal, setShowModal] = useState(false); // Added state for modal visibility
-  const [rating, setRating] = useState(1); // Default rating value
+  const [showModal, setShowModal] = useState(false);
+  const [rating, setRating] = useState(1);
 
   useEffect(() => {
     fetch('http://localhost:5000/ApplyCollage')
@@ -25,10 +26,7 @@ const MyCollege = () => {
 
   const onSubmit = (data) => {
     setLoading(true);
-
-    // Add the rating value to the data being submitted
     data.rating = rating;
-
     fetch('http://localhost:5000/feedback', {
       method: 'POST',
       headers: {
@@ -55,6 +53,10 @@ const MyCollege = () => {
 
   return (
     <div>
+
+      <Helmet>
+        <title>My College || PH JOB TASK </title>
+      </Helmet>
       <div className="gap-5 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         {collages.map((collage, index) => (
           <div key={index}>
@@ -101,10 +103,10 @@ const MyCollege = () => {
             <h3 className="text-center font-bold text-lg">Retting Now</h3>
 
             <div className="flex justify-center items-center">
-              <div className="rating">               
-                <input type="radio" name="rating-1" className="mask mask-star" onChange={() => setRating(1)} checked/>
+              <div className="rating">
+                <input type="radio" name="rating-1" className="mask mask-star" onChange={() => setRating(1)} checked />
                 <input type="radio" name="rating-1" className="mask mask-star" onChange={() => setRating(2)} />
-                <input type="radio" name="rating-1" className="mask mask-star" onChange={() => setRating(3)}  />
+                <input type="radio" name="rating-1" className="mask mask-star" onChange={() => setRating(3)} />
                 <input type="radio" name="rating-1" className="mask mask-star" onChange={() => setRating(4)} />
                 <input type="radio" name="rating-1" className="mask mask-star" onChange={() => setRating(5)} />
               </div>

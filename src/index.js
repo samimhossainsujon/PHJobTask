@@ -22,6 +22,7 @@ import Dashboard from './components/Admin/Dashboard/Dashboard';
 import AddColleges from './components/Admin/PostAdmin/AddColleges/AddColleges';
 import AddGallery from './components/Admin/PostAdmin/AddGallery/AddGallery';
 import AdmissionForm from './components/Admission/AdmissionForm';
+import ErrorPage from './components/Error/ErrorPage';
 
 
 
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <h1>error </h1>,
+    errorElement:<ErrorPage/>,
     children: [
       {
         path: "/",
@@ -82,7 +83,7 @@ const router = createBrowserRouter([
 
   {
     path: 'Dashboard',
-    errorElement: "error page",
+    errorElement: <ErrorPage/>,
     element: <PrivateRoutes> <Dashboard></Dashboard> </PrivateRoutes>,
 
     children: [

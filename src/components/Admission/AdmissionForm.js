@@ -91,7 +91,7 @@ const AdmissionForm = () => {
     return (
         <>
             <Helmet>
-                <title>Apply Collage ||  </title>
+                <title>Admission Form || PH JOB TASK </title>
             </Helmet>
 
             <div className='w-full mb-5'>
@@ -145,7 +145,7 @@ const AdmissionForm = () => {
                                 <option value="science">Science</option>
                                 <option value="humanistic">Humanistic</option>
                                 <option value="business">business</option>
-                               
+
 
                             </select>
 
