@@ -57,7 +57,8 @@ const Home = () => {
                                 <button className="btn btn-primary">View details</button>
 
                             </div>
-                        </div>))}
+                        </div>
+                        ))}
                 </div>
             </>
 

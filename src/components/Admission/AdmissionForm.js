@@ -137,7 +137,7 @@ const AdmissionForm = () => {
 
                         <div className='mt-5 mb-5'>
                             <label className="label">
-                                <span className="text-center text-2xl font-bold text-black">Subject Selection</span>
+                                <span className="text-center text-2xl font-bold text-black">Subject Selection </span>
                             </label>
 
                             <select className="text-input input input-bordered input-error w-full mb-2"
