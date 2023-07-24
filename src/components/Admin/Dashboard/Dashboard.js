@@ -20,8 +20,7 @@ const Dashboard = () => {
                                 <h1 className='text-center text-2xl font-bold underline mt-5 mb-5'>Admin Dashboard</h1>
                             </div>
 
-                            <li className='mb-2 font-bold text-lg'><Link to='/Dashboard/AddColleges'>Add Colleges</Link></li>
-                            <li className='mb-2 font-bold text-lg'><Link to='/Dashboard/AddAdmission'> Add Admission</Link></li>
+                            <li className='mb-2 font-bold text-lg'><Link to='/Dashboard/AddColleges'>Add Colleges</Link></li>                           
                             <li className='mb-2 font-bold text-lg'><Link to='/Dashboard/AddGallery'> Add Gallery images</Link></li>
                             <div className="divider"></div>
                             <li className='mb-2 font-bold text-lg'><Link to='/Dashboard/Colleges'>Colleges</Link></li>

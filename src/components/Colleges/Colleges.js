@@ -1,4 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { AiFillCalendar } from 'react-icons/ai';
+import { BsFillCalendarEventFill } from 'react-icons/bs';
+import { MdSportsScore } from 'react-icons/md';
+import { FcSportsMode } from 'react-icons/fc';
+
+
 
 const Colleges = () => {
 
@@ -29,42 +35,37 @@ const Colleges = () => {
                             <h1 className='text-xl font-bold'>{collage.CollegeName}</h1>
 
 
-                            <div className='flex gap-4'>
-                                <h1>I</h1>
-                                <h1>AdmissionDate :{collage.AdmissionDate}</h1>
+                            <div className='flex items-center gap-3'>
+                               <AiFillCalendar className='text-xl'></AiFillCalendar>
+                                <h1>AdmissionDate : {collage.AdmissionDate}</h1>
                             </div>
 
 
-                            <div className='flex gap-4'>
-                                <h1>I</h1>
+                            <div className='flex items-center gap-3'>
+                                <BsFillCalendarEventFill className='text-xl'></BsFillCalendarEventFill>
                                 <h1>Events : {collage.Events}</h1>
                             </div>
 
-                            <div className='flex gap-4'>
-                                <h1>I</h1>
+
+
+                            <div className='flex items-center gap-3'>
+                                <MdSportsScore className='text-3xl'></MdSportsScore>
                                 <h1>ResearchHistory :{collage.ResearchHistory}</h1>
                             </div>
 
 
-                            <div className='flex gap-4'>
-                                <h1>I</h1>
+                            <div className='flex items-center gap-3'>
+                                <FcSportsMode className='text-3xl'></FcSportsMode>
                                 <h1>Sports :{collage.Sports}</h1>
                             </div>
 
-                          
+                            <button className="btn btn-primary">View details</button>
 
-                            <div className="card-actions">
-                                <button className="btn btn-primary">Buy Now</button>
-                            </div>
                         </div>
                     </div>))}
-
-
-
-
-
-
             </div>
+
+            
         </div>
     );
 };

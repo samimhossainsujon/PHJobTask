@@ -19,9 +19,9 @@ import AuthProvider from './components/AuthProviders/AuthProvider/AuthProvider';
 import { HelmetProvider } from 'react-helmet-async';
 import CollegesDetails from './components/Colleges/CollegesDetails';
 import Dashboard from './components/Admin/Dashboard/Dashboard';
-import AddGallery from './components/Admin/AddGallery/AddGallery';
 import AddColleges from './components/Admin/PostAdmin/AddColleges/AddColleges';
-import AddAdmission from './components/Admin/PostAdmin/AddAdmission/AddAdmission';
+import AddGallery from './components/Admin/PostAdmin/AddGallery/AddGallery';
+import AdmissionForm from './components/Admission/AdmissionForm';
 
 
 
@@ -51,6 +51,11 @@ const router = createBrowserRouter([
       {
         path: "/Admission",
         element: <Admission />
+      },
+
+      {
+        path: "/AdmissionForm/:id",
+        element: <AdmissionForm />
       },
 
 
@@ -85,10 +90,7 @@ const router = createBrowserRouter([
         element:<AddColleges/>
       },
 
-      {
-        path: "AddAdmission",
-        element:<AddAdmission/>
-      },
+      
       {
         path: "AddGallery",
         element:<AddGallery/>

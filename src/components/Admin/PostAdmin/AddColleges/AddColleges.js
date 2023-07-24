@@ -33,6 +33,7 @@ const AddColleges = () => {
                         CollegeName: data.CollegeName,
                         AdmissionDate: data.AdmissionDate,
                         Events: data.Events,
+                        CollegeLocation: data.CollegeLocation,
                         ResearchHistory: data.ResearchHistory,
                         Sports: data.Sports
                     };
@@ -140,6 +141,24 @@ const AddColleges = () => {
 
                                 {...register('Events')}
                                 placeholder="Enter Your Collage Events"
+                                className="input input-bordered input-error w-full mb-2 h-20"
+                                required
+                            />
+                        </div>
+
+
+
+
+                        <div>
+                            <label className="label">
+                                <span className="text-center">College Location</span>
+                            </label>
+                            <textarea
+                                type="text"
+                                min={0}
+
+                                {...register('CollegeLocation')}
+                                placeholder="ex : Dhaka Mirpur"
                                 className="input input-bordered input-error w-full mb-2 h-20"
                                 required
                             />
