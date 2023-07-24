@@ -55,8 +55,10 @@ const router = createBrowserRouter([
 
       {
         path: "/AdmissionForm/:id",
-        element: <AdmissionForm />
+        element: <AdmissionForm />,
+        loader: ({ params }) => fetch(`http://localhost:5000/newCollageAdd/${params.id}`)
       },
+      
 
 
       {
@@ -87,13 +89,13 @@ const router = createBrowserRouter([
 
       {
         path: "AddColleges",
-        element:<AddColleges/>
+        element: <AddColleges />
       },
 
-      
+
       {
         path: "AddGallery",
-        element:<AddGallery/>
+        element: <AddGallery />
       },
     ]
   }

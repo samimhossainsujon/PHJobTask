@@ -21,21 +21,27 @@ const Admission = () => {
             <>
                 <div className='gap-5 grid  lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
                     {collages.map((collage, index) => (
-                        <div className="card w-96 bg-base-100 shadow-xl">
-                            <figure className="px-2 pt-2">
-                                <img src={collage.CollegeImage} alt="Shoes" className="rounded-xl" />
-                            </figure>
-                            <div className="card-body">
-                                <h1 className='text-xl font-bold'>{collage.CollegeName}</h1>
-                                <h1 className='text-xl font-bold'>{collage.CollegeLocation}</h1>
+                        <div 
+                        key={collage._id}
+                        collage={collage}
+                        >
+                            <div className="card w-96 bg-base-100 shadow-xl">
+                                <figure className="px-2 pt-2">
+                                    <img src={collage.CollegeImage} alt="Shoes" className="rounded-xl" />
+                                </figure>
+                                <div className="card-body">
+                                    <h1 className='text-xl font-bold'>{collage.CollegeName}</h1>
+                                    <h1 className='text-xl font-bold'>{collage.CollegeLocation}</h1>
 
 
-                                <Link to={`/AdmissionForm/${collage._id}`}>
-                                    <button className="btn btn-primary">apply now</button>
-                                </Link>
+                                    <Link to={`/AdmissionForm/${collage._id}`}>
+                                        <button className="btn btn-primary">apply now</button>
+                                    </Link>
 
+                                </div>
                             </div>
-                        </div>))}
+                        </div>
+                    ))}
                 </div>
             </>
         </div>
